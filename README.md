@@ -12,3 +12,9 @@
 [![](img/prettyPrint.png)]()
 
 ## With decorator
+* `printDecorator(String message)`
+* `printInfoDecorator(String message)`
+* `printSuccessDecorator(String message)`
+* `printErrorDecorator(String message)`
+
+[![](img/prettyPrinter_decorator.png)]()
