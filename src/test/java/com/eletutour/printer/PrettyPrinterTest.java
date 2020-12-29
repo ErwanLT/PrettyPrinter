@@ -55,4 +55,38 @@ public class PrettyPrinterTest {
         Assert.assertTrue(outputStreamCaptor.toString().trim().contains("] \u001B[0m"));
         Assert.assertTrue(outputStreamCaptor.toString().trim().contains("Info"));
     }
+
+    @Test
+    public void testPrinterInfoDecorator(){
+        printer.printInfoDecorator("Info");
+        Assert.assertTrue(outputStreamCaptor.toString().contains("------"));
+        Assert.assertTrue(outputStreamCaptor.toString().trim().contains("[1;34m"));
+        Assert.assertTrue(outputStreamCaptor.toString().trim().contains("] \u001B[0m"));
+        Assert.assertTrue(outputStreamCaptor.toString().trim().contains("Info"));
+    }
+
+    @Test
+    public void testPrinterErrorDecorator(){
+        printer.printErrorDecorator("Error");
+        Assert.assertTrue(outputStreamCaptor.toString().contains("------"));
+        Assert.assertTrue(outputStreamCaptor.toString().trim().contains("[1;31m"));
+        Assert.assertTrue(outputStreamCaptor.toString().trim().contains("] \u001B[0m"));
+        Assert.assertTrue(outputStreamCaptor.toString().trim().contains("Error"));
+    }
+
+    @Test
+    public void testPrinterSuccessDecorator(){
+        printer.printSuccessDecorator("Succes");
+        Assert.assertTrue(outputStreamCaptor.toString().contains("------"));
+        Assert.assertTrue(outputStreamCaptor.toString().trim().contains("[1;32m"));
+        Assert.assertTrue(outputStreamCaptor.toString().trim().contains("] \u001B[0m"));
+        Assert.assertTrue(outputStreamCaptor.toString().trim().contains("Succes"));
+    }
+
+    @Test
+    public void testPrintDecorator(){
+        printer.printDecorator("Hello World");
+        Assert.assertTrue(outputStreamCaptor.toString().contains("------"));
+        Assert.assertTrue(outputStreamCaptor.toString().trim().contains("Hello World"));
+    }
 }

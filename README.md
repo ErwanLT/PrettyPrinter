@@ -3,10 +3,12 @@
 [![codecov](https://codecov.io/gh/ErwanLT/PrettyPrinter/branch/main/graph/badge.svg?token=TL01JSTFYO)](https://codecov.io/gh/ErwanLT/PrettyPrinter)
 
 # PrettyPrinter
-
+## Simple printer
 * `print(String message)`
 * `printInfo(String message)`
 * `printSuccess(String message)`
 * `printError(String message)`
 
 [![](img/prettyPrint.png)]()
+
+## With decorator
