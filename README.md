@@ -18,3 +18,16 @@
 * `printErrorDecorator(String message)`
 
 [![](img/prettyPrinter_decorator.png)]()
+
+## Using the builder
+* `builder(PrinterType type, String message, String decorator)`
+
+* PrinterType (Enum):
+  * STANDARD
+  * INFO
+  * SUCCESS
+  * ERROR
+* decorator
+  * the string that will surcharge the standard decorator, if empty or null will be `------`
+  
+[![](img/prettyPrinter_builder.png)]()
