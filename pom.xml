@@ -6,7 +6,7 @@
 
     <groupId>com.eletutour</groupId>
     <artifactId>PrettyPrinter</artifactId>
-    <version>2.0-SNAPSHOT</version>
+    <version>3.0-SNAPSHOT</version>
 
     <build>
         <plugins>
@@ -58,6 +58,11 @@
             <artifactId>junit</artifactId>
             <version>4.13.1</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.4</version>
         </dependency>
     </dependencies>
 

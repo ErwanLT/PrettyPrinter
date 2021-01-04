@@ -58,7 +58,7 @@ public class PrettyPrinterTest {
 
     @Test
     public void testPrinterInfoDecorator(){
-        printer.printInfoDecorator("Info");
+        printer.printInfoDecorator("Info", null);
         Assert.assertTrue(outputStreamCaptor.toString().contains("------"));
         Assert.assertTrue(outputStreamCaptor.toString().trim().contains("[1;34m"));
         Assert.assertTrue(outputStreamCaptor.toString().trim().contains("] \u001B[0m"));
@@ -67,7 +67,7 @@ public class PrettyPrinterTest {
 
     @Test
     public void testPrinterErrorDecorator(){
-        printer.printErrorDecorator("Error");
+        printer.printErrorDecorator("Error", null);
         Assert.assertTrue(outputStreamCaptor.toString().contains("------"));
         Assert.assertTrue(outputStreamCaptor.toString().trim().contains("[1;31m"));
         Assert.assertTrue(outputStreamCaptor.toString().trim().contains("] \u001B[0m"));
@@ -76,7 +76,7 @@ public class PrettyPrinterTest {
 
     @Test
     public void testPrinterSuccessDecorator(){
-        printer.printSuccessDecorator("Succes");
+        printer.printSuccessDecorator("Succes", null);
         Assert.assertTrue(outputStreamCaptor.toString().contains("------"));
         Assert.assertTrue(outputStreamCaptor.toString().trim().contains("[1;32m"));
         Assert.assertTrue(outputStreamCaptor.toString().trim().contains("] \u001B[0m"));
@@ -85,7 +85,7 @@ public class PrettyPrinterTest {
 
     @Test
     public void testPrintDecorator(){
-        printer.printDecorator("Hello World");
+        printer.printDecorator("Hello World", null);
         Assert.assertTrue(outputStreamCaptor.toString().contains("------"));
         Assert.assertTrue(outputStreamCaptor.toString().trim().contains("Hello World"));
     }
